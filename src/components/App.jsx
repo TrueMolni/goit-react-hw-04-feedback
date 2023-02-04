@@ -30,9 +30,8 @@ const App = () => {
   const total = good + neutral + bad;
 
   const countPositiveFeedbackPercentage = propName => {
-    if (!total) {
-      return 0;
-    }
+    if (!total) return 0;
+
     const value = feedbacks[propName];
     const result = ((value / total) * 100).toFixed(2);
     return Number(result);
